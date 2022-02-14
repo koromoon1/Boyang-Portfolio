@@ -1,2 +1,2 @@
 # Boyang_Qian_Portfolio
-My portfolio which uses Vue, Bootstrap, CSS.
+Boyang's portfolio. Uses Vue, Bootstrap, CSS.
