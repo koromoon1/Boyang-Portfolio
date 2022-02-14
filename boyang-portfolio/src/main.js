@@ -11,6 +11,13 @@ import Project2 from "./components/Projects/Project2";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import "bootstrap";
+// Font Awesome
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { faHtml5 } from "@fortawesome/free-brands-svg-icons";
+// import { faJsSquare } from "@fortawesome/free-brands-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
+library.add(faHtml5);
+// library.add(faJsSquare);
 
 const router = createRouter({
   history: createWebHistory(),
@@ -18,6 +25,20 @@ const router = createRouter({
     {
       path: "/",
       component: Home,
+      // children: [
+      //   {
+      //     path: "experience",
+      //     component: Experience,
+      //   },
+      //   {
+      //     path: "skills",
+      //     component: Skills,
+      //   },
+      //   {
+      //     path: "contact",
+      //     component: Contact,
+      //   },
+      // ],
     },
     {
       path: "/about",
@@ -37,6 +58,24 @@ const router = createRouter({
     },
   ],
   linkActiveClass: "active",
+  scrollBehavior(to) {
+    if (to.hash) {
+      return {
+        el: to.hash,
+        behavior: "smooth",
+      };
+    }
+  },
+  // scrollBehavior(to, from, savedPosition) {
+  //   if (savedPosition) {
+  //     return savedPosition;
+  //   } else {
+  //     return { top: 0 };
+  //   }
+  // },
 });
 
-createApp(App).use(router).mount("#app");
+createApp(App)
+  .use(router)
+  .component("font-awesome-icon", FontAwesomeIcon)
+  .mount("#app");
