@@ -1,14 +1,15 @@
 <template>
-  <div class="d-flex flex-column align-items-center">
-    <div class="skills-title-container p-5 mt-5">
-      <h2 class="skills-title"><i class="bi bi-tools"></i> My Skills</h2>
+  <div class="container d-flex flex-column align-items-center">
+    <!-- Title -->
+    <div class="title-container p-5 mt-5">
+      <h2 class="section-title"><i class="bi bi-tools"></i> My Skills</h2>
     </div>
+    <!-- Skill Card -->
     <div class="skills-card-container d-flex flex-wrap justify-content-center">
+      <!-- <img src="../../assets/svg/vuejs-brands.svg" alt="" /> -->
       <div v-for="(skills, index) in skillsList" :key="index">
         <SkillsCard v-for="(i, index) in skills" :key="index" :i="i" />
       </div>
-      <!-- <font-awesome-icon :icon="['fab', 'js-square']" /> -->
-      <font-awesome-icon icon="fa-brands fa-html5" />
     </div>
   </div>
 </template>
@@ -17,13 +18,21 @@
 import SkillsCard from "./SkillsCard.vue";
 
 export default {
+  name: "Skills",
   components: { SkillsCard },
   data() {
     return {
       skillsList: {
-        languages: ["HTML", "CSS", "Javascript"],
-        libraries: ["Bootstrap", "Vue"],
-        tools: ["Github"],
+        languages: [
+          { name: "html", iconFileName: "html5" },
+          { name: "css", iconFileName: "css3-alt" },
+          { name: "javascript", iconFileName: "js-square" },
+        ],
+        libraries: [
+          { name: "bootstrap", iconFileName: "bootstrap" },
+          { name: "vue", iconFileName: "vuejs" },
+        ],
+        tools: [{ name: "github", iconFileName: "github-square" }],
       },
     };
   },
@@ -31,14 +40,6 @@ export default {
 </script>
 
 <style scoped>
-h2 {
-  color: #333;
-  font-size: 2.7rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 3px;
-}
-
 .skills-card-container {
   width: 50%;
 }

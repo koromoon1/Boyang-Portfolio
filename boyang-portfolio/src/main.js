@@ -2,11 +2,11 @@ import { createApp } from "vue";
 import { createRouter, createWebHistory } from "vue-router";
 
 import App from "./App.vue";
-import Home from "./components/views/Home";
-import About from "./components/views/About";
-import Projects from "./components/views/Projects";
-import Project1 from "./components/Projects/Project1";
-import Project2 from "./components/Projects/Project2";
+import Home from "./views/Home";
+import About from "./views/About";
+import Projects from "./views/Projects";
+import ProjectShowcase from "./components/Projects/ProjectShowcase";
+// import Project2 from "./components/Projects/Project2";
 // Bootstrap
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
@@ -49,13 +49,13 @@ const router = createRouter({
       component: Projects,
     },
     {
-      path: "/projects/project1",
-      component: Project1,
+      path: "/projects/:projectId",
+      component: ProjectShowcase,
     },
-    {
-      path: "/projects/project2",
-      component: Project2,
-    },
+    // {
+    //   path: "/projects/project2",
+    //   component: Project2,
+    // },
   ],
   linkActiveClass: "active",
   scrollBehavior(to) {

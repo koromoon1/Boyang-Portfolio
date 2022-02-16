@@ -23,27 +23,33 @@
         <ul class="navbar-nav mb-2 mb-lg-0">
           <!-- ===== Home Page ===== -->
           <li class="nav-item">
-            <router-link class="nav-link" to="/#home">Home</router-link>
+            <router-link
+              class="nav-link"
+              to="/"
+              @click="homePageScrollTop(), checkRouterUrl()"
+              :class="{
+                active: this.$route.fullPath === '/',
+              }"
+              >Home</router-link
+            >
           </li>
 
           <!-- ===== About ===== -->
           <li class="nav-item">
-            <router-link class="nav-link" to="/#experience"
-              >Experience</router-link
-            >
+            <router-link class="nav-link" to="/about">About</router-link>
           </li>
-          <!-- ===== Skills ===== -->
+
+          <!-- ===== Projects ===== -->
           <li class="nav-item">
-            <router-link class="nav-link" to="/#skills"> Skills </router-link>
+            <router-link class="nav-link" to="/projects">
+              Projects
+            </router-link>
           </li>
-          <!-- ===== Contact ===== -->
-          <li class="nav-item">
-            <router-link class="nav-link" to="/#contact"> Contact </router-link>
-          </li>
+
           <!-- ===== Resume ===== -->
           <li class="nav-item">
             <a href="Boyang_Qian_Resume.pdf" target="_blank" class="nav-link"
-              >Resume<i class="bi bi-file-earmark-pdf-fill"></i
+              >Resume<i class="pdf-icon bi bi-file-earmark-pdf-fill"></i
             ></a>
           </li>
 
@@ -91,14 +97,26 @@
 <script>
 export default {
   name: "Header",
+  data() {
+    return {
+      currentPage: "",
+    };
+  },
+  methods: {
+    checkRouterUrl() {
+      console.log(this.$route.fullPath);
+    },
+    homePageScrollTop() {
+      if (this.$route.path === "/") window.scrollTo(0, 0);
+    },
+    activeLication(id) {
+      this.currentPage = id;
+    },
+  },
 };
 </script>
 
 <style scoped>
-.navbar {
-  height: 8vh !important;
-}
-
 /* Logo */
 .logo-container {
   width: 3rem;
@@ -127,8 +145,8 @@ export default {
 .nav-link {
   display: inline-block;
   padding: 0 !important;
-  margin-left: 1rem !important;
-  margin-right: 1rem !important;
+  margin-left: 1.1rem !important;
+  margin-right: 1.1rem !important;
   font-size: 1.1rem;
   color: #333;
   text-transform: uppercase;
@@ -139,6 +157,10 @@ export default {
 
 .nav-link i {
   margin-left: 0.3rem;
+}
+
+.pdf-icon {
+  color: #f40f02;
 }
 
 /* Nav Link Animation */
@@ -153,6 +175,11 @@ export default {
   background-color: #333;
   visibility: hidden;
   transition: all 0.3s ease-in-out 0s;
+}
+
+a:hover,
+a.active {
+  color: #333;
 }
 
 a:hover:before,

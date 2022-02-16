@@ -1,9 +1,6 @@
 <template>
   <div class="experience-card">
-    <div
-      class="card mb-5 shadow-lg p-3 ps-4"
-      style="max-width: 780px; width: 50rem"
-    >
+    <div class="card mb-5 shadow-lg p-5" style="max-width: 780px; width: 50rem">
       <div class="row g-0">
         <!-- Logo -->
         <div class="col-md-4 img-container">
@@ -18,7 +15,7 @@
 
         <!-- Details -->
         <div class="col-md-8">
-          <div class="card-body">
+          <div class="card-body py-3 px-5">
             <!-- Company Name -->
             <h5 class="card-title">{{ i.companyName }}</h5>
             <!-- Title -->
@@ -53,6 +50,7 @@
 
 <script>
 export default {
+  name: "ExperienceCard",
   props: ["i"],
   data() {
     return {

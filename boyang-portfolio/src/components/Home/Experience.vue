@@ -1,7 +1,7 @@
 <template>
-  <div class="d-flex flex-column align-items-center">
+  <div class="container d-flex flex-column align-items-center">
     <div class="experience-title-container p-5 mt-5">
-      <h2 class="experience-title">
+      <h2 class="section-title">
         <i class="bi bi-award-fill"></i> My Experience
       </h2>
     </div>
@@ -19,6 +19,7 @@
 import ExperienceCard from "./ExperienceCard.vue";
 
 export default {
+  name: "Experience",
   components: { ExperienceCard },
   data() {
     return {
@@ -64,12 +65,4 @@ export default {
 };
 </script>
 
-<style scoped>
-h2 {
-  color: #333;
-  font-size: 2.7rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 3px;
-}
-</style>
+<style scoped></style>

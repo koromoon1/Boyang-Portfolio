@@ -1,17 +1,14 @@
 <template>
-  <footer class="footer pt-5 mt-5">
-    <div class="container d-flex flex-column">
+  <footer class="container footer mt-5">
+    <div class="d-flex flex-column">
       <div class="footer-upper pb-4 d-flex justify-content-between">
-        <div class="footer-info">
-          <h4 class="ps-3">Boyang's Portfolio</h4>
-          <!-- <p>
-            A Frontend focused Web Developer wants to contribute to the
-            Front-end of Websites that lead to the success of products that
-            makes the world a better place.
-          </p> -->
+        <!-- Heading -->
+        <div class="footer-info ps-3">
+          <h4>Boyang's Portfolio</h4>
+          <p>Inspired by Dopefolio</p>
         </div>
+        <!-- Social Links -->
         <div class="footer-social">
-          <!-- <h4 class="pe-3">Social Links</h4> -->
           <ul class="social-icon-list d-flex justify-content-center">
             <li class="social-icon-link">
               <a target="_blank" href="https://www.linkedin.com/in/boyang-qian/"
@@ -36,7 +33,8 @@
           </ul>
         </div>
       </div>
-      <div class="footer-lower">
+      <!-- Copyright -->
+      <div class="footer-lower py-4">
         <div class="main-footer__lower">&copy; Copyright 2021</div>
       </div>
     </div>
@@ -79,9 +77,7 @@ h4 {
 }
 
 .footer-lower {
-  padding: 2rem 0;
   border-top: 1px solid #444;
-  /* color: #eee; */
   color: #333;
   font-size: 1rem;
   text-align: center;
