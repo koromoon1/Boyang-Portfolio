@@ -11,22 +11,34 @@
         <div class="footer-social">
           <ul class="social-icon-list d-flex justify-content-center">
             <li class="social-icon-link">
-              <a target="_blank" href="https://www.linkedin.com/in/boyang-qian/"
+              <a
+                class="social-icon"
+                target="_blank"
+                href="https://www.linkedin.com/in/boyang-qian/"
                 ><i class="bi bi-linkedin"></i
               ></a>
             </li>
             <li class="social-icon-link">
-              <a target="_blank" href="https://github.com/koromoon1"
+              <a
+                class="social-icon"
+                target="_blank"
+                href="https://github.com/koromoon1"
                 ><i class="bi bi-github"></i
               ></a>
             </li>
             <li class="social-icon-link">
-              <a target="_blank" href="https://twitter.com/BoyangQian"
+              <a
+                class="social-icon"
+                target="_blank"
+                href="https://twitter.com/BoyangQian"
                 ><i class="bi bi-twitter"></i
               ></a>
             </li>
             <li class="social-icon-link">
-              <a target="_blank" href="mailto:eqboyang@gmail.com"
+              <a
+                class="social-icon"
+                target="_blank"
+                href="mailto:eqboyang@gmail.com"
                 ><i class="bi bi-envelope-fill"></i
               ></a>
             </li>
@@ -42,10 +54,6 @@
 </template>
 
 <style scoped>
-a {
-  color: #333;
-}
-
 ul {
   list-style-type: none;
   padding: 0;
@@ -74,6 +82,16 @@ h4 {
   margin-left: 0.5rem;
   margin-right: 0.5rem;
   /* Bootstrap Icons has little margin vertically, setting extra horizontal margin/padding is needed for being square */
+  transition: transform 0.3s;
+}
+
+.social-icon-link:hover {
+  color: #333;
+  transform: translateY(-5px);
+}
+
+.social-icon {
+  color: #333;
 }
 
 .footer-lower {

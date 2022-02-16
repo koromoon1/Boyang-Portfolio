@@ -38,11 +38,6 @@ export default {
       return "/projects/" + this.project.id;
     },
   },
-  methods: {
-    toProjects() {
-      this.$router.push("/projects");
-    },
-  },
 };
 </script>
 

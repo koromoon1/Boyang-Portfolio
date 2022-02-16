@@ -6,7 +6,6 @@
     </div>
     <!-- Skill Card -->
     <div class="skills-card-container d-flex flex-wrap justify-content-center">
-      <!-- <img src="../../assets/svg/vuejs-brands.svg" alt="" /> -->
       <div v-for="(skills, index) in skillsList" :key="index">
         <SkillsCard v-for="(i, index) in skills" :key="index" :i="i" />
       </div>

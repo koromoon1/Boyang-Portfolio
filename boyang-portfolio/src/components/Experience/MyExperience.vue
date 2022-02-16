@@ -1,12 +1,10 @@
 <template>
   <div class="container d-flex flex-column align-items-center">
-    <div class="experience-title-container p-5 mt-5">
-      <h2 class="section-title">
-        <i class="bi bi-award-fill"></i> My Experience
-      </h2>
+    <div class="experience-title-container p-5 my-5">
+      <h2 class="section-title"><i class="bi bi-award"></i> My Experience</h2>
     </div>
     <div class="experience-card-container">
-      <ExperienceCard
+      <MyExperienceCard
         v-for="(i, index) in experienceList"
         :key="index"
         :i="i"
@@ -16,11 +14,11 @@
 </template>
 
 <script>
-import ExperienceCard from "./ExperienceCard.vue";
+import MyExperienceCard from "./MyExperienceCard.vue";
 
 export default {
   name: "Experience",
-  components: { ExperienceCard },
+  components: { MyExperienceCard },
   data() {
     return {
       experienceList: [

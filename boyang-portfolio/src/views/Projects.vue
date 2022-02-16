@@ -1,10 +1,10 @@
 <template>
-  <div id="projects">
+  <div id="projectsPage">
     <!-- Header -->
     <Header />
 
     <!-- Title -->
-    <div class="contact d-flex flex-column align-items-center">
+    <div class="contact d-flex flex-column align-items-center mt-5">
       <div class="section-title-container p-5 mt-5">
         <h2 class="section-title">
           <i class="bi bi-envelope-fill"></i> Projects
@@ -43,7 +43,7 @@
 import Header from "../components/Header.vue";
 import projectsIntro from "../components/Projects/ProjectIntro.vue";
 import SocialLinkSideBar from "../components/SocialLinkSideBar.vue";
-import Contact from "../components/Home/Contact.vue";
+import Contact from "../components/Contact.vue";
 import Footer from "../components/Footer.vue";
 export default {
   name: "Projects",

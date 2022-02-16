@@ -109,8 +109,10 @@ export default {
   watch: {
     // Update window height when resize
     windowHeight(newHeight) {
-      this.windowHeight = newHeight;
-      console.log("New window height = " + this.windowHeight);
+      if (this.page === "home") {
+        this.windowHeight = newHeight;
+        console.log("New window height = " + this.windowHeight);
+      }
     },
     // Update scroll value when window scroll
     scrollValue(newValue) {
@@ -127,15 +129,17 @@ export default {
   },
   mounted() {
     // Get Window Height
-    this.$nextTick(() => {
-      window.addEventListener("resize", this.onResize);
-    });
-    // Get Scroll Y
-    window.addEventListener("scroll", () => {
-      let scrollValue = document.documentElement.scrollTop;
-      this.scrollValue = scrollValue;
-      // console.log(this.scrollValue);
-    });
+    if (this.page === "home") {
+      this.$nextTick(() => {
+        window.addEventListener("resize", this.onResize);
+      });
+      // Get Scroll Y
+      window.addEventListener("scroll", () => {
+        let scrollValue = document.documentElement.scrollTop;
+        this.scrollValue = scrollValue;
+        // console.log(this.scrollValue);
+      });
+    }
   },
   methods: {
     onResize() {

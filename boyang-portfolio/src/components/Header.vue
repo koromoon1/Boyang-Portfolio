@@ -26,7 +26,7 @@
             <router-link
               class="nav-link"
               to="/"
-              @click="homePageScrollTop(), checkRouterUrl()"
+              @click="homePageScrollTop()"
               :class="{
                 active: this.$route.fullPath === '/',
               }"
@@ -35,8 +35,15 @@
           </li>
 
           <!-- ===== About ===== -->
-          <li class="nav-item">
+          <!-- <li class="nav-item">
             <router-link class="nav-link" to="/about">About</router-link>
+          </li> -->
+
+          <!-- ===== Experience ===== -->
+          <li class="nav-item">
+            <router-link class="nav-link" to="/experience"
+              >Experience</router-link
+            >
           </li>
 
           <!-- ===== Projects ===== -->
@@ -51,6 +58,11 @@
             <a href="Boyang_Qian_Resume.pdf" target="_blank" class="nav-link"
               >Resume<i class="pdf-icon bi bi-file-earmark-pdf-fill"></i
             ></a>
+          </li>
+
+          <!-- ===== Contact ===== -->
+          <li class="nav-item">
+            <router-link class="nav-link" to="/contact"> Contact </router-link>
           </li>
 
           <!-- Language Changing -->
@@ -103,9 +115,6 @@ export default {
     };
   },
   methods: {
-    checkRouterUrl() {
-      console.log(this.$route.fullPath);
-    },
     homePageScrollTop() {
       if (this.$route.path === "/") window.scrollTo(0, 0);
     },
