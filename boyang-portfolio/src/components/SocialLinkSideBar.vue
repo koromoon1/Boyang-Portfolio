@@ -153,20 +153,20 @@ export default {
 /* Social Link */
 .heroSocial {
   position: fixed;
-  top: 45%;
+  top: 40%;
   left: 0;
   border: 2px solid #fff;
 }
 .heroSocialDark {
   position: fixed;
-  top: 45%;
+  top: 40%;
   left: 0;
   border: 2px solid #fff;
   background-color: #333;
 }
 
 .socialIconContainer {
-  width: 2.6rem;
+  width: 2.8rem;
 }
 
 .socialIconLink {
@@ -192,7 +192,7 @@ export default {
   background-color: rgba(255, 255, 255, 0.1);
 }
 .socialIconLinkDark:hover {
-  background-color: rgba(51, 51, 51, 0.1);
+  background-color: rgba(0, 0, 0, 0.2);
 }
 
 .socialIconContainer:last-child a {

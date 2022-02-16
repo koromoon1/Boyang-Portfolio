@@ -6,16 +6,9 @@
     <!-- Title -->
     <div class="contact d-flex flex-column align-items-center mt-5">
       <div class="section-title-container p-5 mt-5">
-        <h2 class="section-title">
-          <i class="bi bi-envelope-fill"></i> Projects
-        </h2>
+        <h2 class="section-title"><i class="bi bi-folder2"></i> Projects</h2>
       </div>
       <p>Here you can find some of the projects that I created recently</p>
-      <!-- <div class="btn-container my-5">
-        <a class="myBtn myBtn-lg" href="mailto:eqboyang@gmail.com"
-          >Send An Email</a
-        >
-      </div> -->
     </div>
 
     <!-- Projects List -->
@@ -32,7 +25,7 @@
     <SocialLinkSideBar :page="projects" />
 
     <!-- Contact -->
-    <Contact id="contact" class="mt-5 pb-5" />
+    <ContactSection id="contact" class="mt-5 pb-5" />
 
     <!-- Footer -->
     <Footer id="footer" />
@@ -43,12 +36,18 @@
 import Header from "../components/Header.vue";
 import projectsIntro from "../components/Projects/ProjectIntro.vue";
 import SocialLinkSideBar from "../components/SocialLinkSideBar.vue";
-import Contact from "../components/Contact.vue";
+import ContactSection from "../components/ContactSection.vue";
 import Footer from "../components/Footer.vue";
 export default {
   name: "Projects",
   inject: ["projects"],
-  components: { Header, projectsIntro, SocialLinkSideBar, Contact, Footer },
+  components: {
+    Header,
+    projectsIntro,
+    SocialLinkSideBar,
+    ContactSection,
+    Footer,
+  },
 };
 </script>
 

@@ -1,15 +1,20 @@
 <template>
   <div class="container d-flex flex-column align-items-center">
     <!-- Title -->
-    <div class="title-container p-5 mt-5">
+    <div class="title-container pt-5 pb-3 mt-5">
       <h2 class="section-title"><i class="bi bi-tools"></i> My Skills</h2>
     </div>
+
     <!-- Skill Card -->
-    <div class="skills-card-container d-flex flex-wrap justify-content-center">
+    <div
+      class="skills-card-container d-flex flex-wrap justify-content-center mt-3 mb-5"
+    >
       <div v-for="(skills, index) in skillsList" :key="index">
         <SkillsCard v-for="(i, index) in skills" :key="index" :i="i" />
       </div>
     </div>
+
+    <p>More are coming <i class="bi bi-emoji-sunglasses"></i></p>
   </div>
 </template>
 
@@ -39,6 +44,11 @@ export default {
 </script>
 
 <style scoped>
+p {
+  font-size: 1.5rem;
+  color: #333;
+}
+
 .skills-card-container {
   width: 50%;
 }

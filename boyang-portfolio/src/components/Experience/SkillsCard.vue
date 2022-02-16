@@ -1,5 +1,5 @@
 <template>
-  <div class="skill-card p-2 m-3">
+  <div class="skill-card p-2 my-4 mx-5">
     <img :src="imgUrl" alt="icon of ${i.iconFileName}" />
   </div>
 </template>
@@ -10,7 +10,7 @@ export default {
   props: ["i"],
   data() {
     return {
-      imgUrl: require(`../../assets/svg/nox/${this.i.iconFileName}-brands.svg`),
+      imgUrl: require(`../../assets/svg/${this.i.iconFileName}-brands.svg`),
     };
   },
 };
@@ -18,13 +18,10 @@ export default {
 
 <style scoped>
 .skill-card {
-  width: 50px;
-  height: 50px;
+  width: 100px;
+  height: 100px;
   display: inline-block;
-  /* padding: 0.5rem;
-  margin-bottom: 1.5rem;
-  margin-right: 1.5rem; */
-  background: #eee;
+  background: #ddd;
   border-radius: 5px;
   box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.15);
 }

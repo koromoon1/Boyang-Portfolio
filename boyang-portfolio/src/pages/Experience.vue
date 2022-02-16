@@ -10,8 +10,8 @@
     <!-- Social Links Side Bar -->
     <SocialLinkSideBar />
 
-    <!-- Contact -->
-    <Contact id="contact" class="mt -5 pb-5" />
+    <!-- Contact Section -->
+    <ContactSection id="contactSection" class="mt -5 pb-5" />
 
     <!-- Footer -->
     <Footer id="footer" />
@@ -23,7 +23,7 @@ import Header from "../components/Header.vue";
 import MyExperience from "../components/Experience/MyExperience.vue";
 import Skills from "../components/Experience/Skills.vue";
 import SocialLinkSideBar from "../components/SocialLinkSideBar.vue";
-import Contact from "../components/Contact.vue";
+import ContactSection from "../components/ContactSection.vue";
 import Footer from "../components/Footer.vue";
 export default {
   name: "About",
@@ -32,7 +32,7 @@ export default {
     MyExperience,
     Skills,
     SocialLinkSideBar,
-    Contact,
+    ContactSection,
     Footer,
   },
   props: {},

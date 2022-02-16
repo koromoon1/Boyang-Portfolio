@@ -8,7 +8,7 @@
 
     <SocialLinkSideBar :page="'home'" />
 
-    <Contact id="contact" class="pb-5" />
+    <ContactSection id="contact" class="pb-5" />
 
     <Footer id="footer" />
   </div>
@@ -18,7 +18,7 @@
 import Header from "../components/Header.vue";
 import Hero from "../components/Home/Hero.vue";
 import AboutMe from "../components/Home/AboutMe.vue";
-import Contact from "../components/Contact.vue";
+import ContactSection from "../components/ContactSection.vue";
 import Footer from "../components/Footer.vue";
 import SocialLinkSideBar from "../components/SocialLinkSideBar.vue";
 export default {
@@ -27,7 +27,7 @@ export default {
     Header,
     Hero,
     AboutMe,
-    Contact,
+    ContactSection,
     Footer,
     SocialLinkSideBar,
   },

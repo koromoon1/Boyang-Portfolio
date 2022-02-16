@@ -1,9 +1,7 @@
 <template>
   <div class="contact d-flex flex-column align-items-center">
     <div class="contact-title-container p-5 mt-5">
-      <h2 class="section-title">
-        <i class="bi bi-envelope-fill"></i> Contact Me
-      </h2>
+      <h2 class="section-title">Contact Me</h2>
     </div>
     <p>
       Feel free to send a email to me, whether it's a project, job opportunity,
@@ -15,8 +13,8 @@
     </p>
     <div class="btn-container my-5">
       <a class="myBtn myBtn-lg" href="mailto:eqboyang@gmail.com"
-        >Send An Email</a
-      >
+        >Send An Email <i class="bi bi-emoji-wink"></i
+      ></a>
     </div>
   </div>
 </template>
@@ -48,5 +46,9 @@ p {
     url("../assets/jpg/background-4.jpg");
   background-size: fit;
   background-position: center;
+}
+
+.myBtn:hover i {
+  color: goldenrod;
 }
 </style>

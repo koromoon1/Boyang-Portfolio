@@ -50,7 +50,7 @@ p {
       rgba(0, 0, 0, 0.6) 50vw,
       rgba(0, 0, 0, 0.5)
     ),
-    url("../../assets/png/background.png");
+    url("../../assets/png/hero-background.png");
   background-size: cover;
   background-position: center;
   height: calc(100vh - 76px);

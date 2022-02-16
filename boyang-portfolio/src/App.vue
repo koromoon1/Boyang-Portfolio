@@ -12,18 +12,28 @@ export default {
       projects: [
         {
           id: "project1",
-          name: "Project 1",
+          name: "Pig Game",
           techStack: ["tech1", "tech2", "tech3"],
+          imgName: "pigGame",
+          imgType: "png",
+          description:
+            "A simple but super fun game for 2 players. Try it out with your friends and see who can win the game!",
         },
         {
           id: "project2",
           name: "Project 2",
           techStack: ["tech1", "tech2", "tech4"],
+          imgName: "",
+          imgType: "",
+          description: "",
         },
         {
           id: "project3",
           name: "Project 3",
           techStack: ["tech2", "tech3", "tech4", "tech5"],
+          imgName: "",
+          imgType: "",
+          description: "",
         },
       ],
       technologies: [

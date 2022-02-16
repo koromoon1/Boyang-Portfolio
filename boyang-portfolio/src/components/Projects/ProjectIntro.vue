@@ -1,28 +1,33 @@
 <template>
   <div id="projectsIntro">
     <!-- Project Info -->
-    <div class="projects-content row px-5">
+    <div class="projects-content row g-5 px-5">
       <!-- Project Image -->
-      <div class="project-content-img-container col-7 g-5 mb-5">
-        <img
-          class="mockup-img"
-          src="../../assets/jpeg/project-mockup-example.jpeg"
-          alt="Software Screenshot"
-        />
-        <p class="overlayText">Coming Soon</p>
+      <div class="project-content-img-container col-7 mb-5">
+        <img class="mockup-img" :src="imageUrl" alt="Software Screenshot" />
+        <p class="overlayText" v-if="!projectHasInfo">Coming Soon</p>
       </div>
       <!-- Project Info Text -->
       <div
         class="project-content-info col-5 d-flex flex-column justify-content-center align-items-start"
       >
-        <h3 class="project-content-info-title">{{ project.name }}</h3>
-        <p class="project-content-info-text my-4">
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestiae
-          rem error dolorem id amet exercitationem nisi nobis repellat hic enim.
+        <!-- Info Title -->
+        <h3 v-if="projectHasInfo" class="project-content-info-title">
+          {{ project.name }}
+        </h3>
+        <h3 v-else class="project-content-info-title">Project Coming Soon</h3>
+        <!-- Description -->
+        <p v-if="projectHasInfo" class="project-content-info-text my-4">
+          {{ project.description }}
+        </p>
+        <p v-else class="project-content-info-text my-4">
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sunt ad,
+          fuga architecto reiciendis omnis sit aspernatur molestias dolorum.
+          Magni, reiciendis!
         </p>
         <!-- Project Link -->
         <router-link :to="projectLink" class="myBtn myBtn-dark"
-          >Case Study</router-link
+          >Project Detail</router-link
         >
       </div>
     </div>
@@ -36,6 +41,28 @@ export default {
   computed: {
     projectLink() {
       return "/projects/" + this.project.id;
+    },
+    projectHasInfo() {
+      if (
+        this.project.description !== "" &&
+        this.project.imgName !== "" &&
+        this.project.imgType !== ""
+      ) {
+        return true;
+      } else {
+        return false;
+      }
+    },
+
+    imageUrl() {
+      if (this.project.imgName !== "" && this.project.imgType !== "") {
+        return require("../../assets/projects/" +
+          this.project.imgName +
+          "." +
+          this.project.imgType);
+      } else {
+        return require("../../assets/jpeg/project-mockup-example.jpeg");
+      }
     },
   },
 };

@@ -1,9 +1,12 @@
 <template>
   <div class="container d-flex flex-column align-items-center">
-    <div class="experience-title-container p-5 my-5">
+    <div class="experience-title-container pt-5 my-5">
       <h2 class="section-title"><i class="bi bi-award"></i> My Experience</h2>
     </div>
-    <div class="experience-card-container">
+
+    <p>Here you can find my working experience and achievements</p>
+
+    <div class="experience-card-container mt-5 pt-4">
       <MyExperienceCard
         v-for="(i, index) in experienceList"
         :key="index"
@@ -63,4 +66,9 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+p {
+  font-size: 1.5rem;
+  color: #333;
+}
+</style>

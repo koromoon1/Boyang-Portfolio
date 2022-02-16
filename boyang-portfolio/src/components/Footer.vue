@@ -1,5 +1,5 @@
 <template>
-  <footer class="container footer mt-5">
+  <footer class="container footer bg-light mt-5">
     <div class="d-flex flex-column">
       <div class="footer-upper pb-4 d-flex justify-content-between">
         <!-- Heading -->
@@ -62,10 +62,6 @@ ul {
 
 h4 {
   font-weight: 700;
-}
-
-.footer {
-  width: 30%vh;
 }
 
 .footer-info {

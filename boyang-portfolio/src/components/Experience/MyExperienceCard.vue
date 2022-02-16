@@ -78,6 +78,10 @@ h6 {
   font-size: 1.2rem;
 }
 
+.card {
+  border: none;
+}
+
 .img-container {
   text-align: center;
 }
