@@ -17,7 +17,7 @@
     </div>
 
     <!-- Mouse Scroll Animation -->
-    <MouseScrollAnimation class="align-self-center" />
+    <MouseScrollAnimation class="align-self-center" v-if="windowWidth >= 768" />
   </div>
 </template>
 
@@ -26,6 +26,29 @@ import MouseScrollAnimation from "../Animation/MouseScrollAnimation.vue";
 export default {
   name: "Hero",
   components: { MouseScrollAnimation },
+  data() {
+    return {
+      windowWidth: window.innerWidth,
+    };
+  },
+  watch: {
+    // Update window height when resize
+    windowWidth(newWidth) {
+      this.windowWidth = newWidth;
+      console.log("New window height = " + this.windowWidth);
+    },
+  },
+  mounted() {
+    // Get Window Width
+    this.$nextTick(() => {
+      window.addEventListener("resize", this.onResize);
+    });
+  },
+  methods: {
+    onResize() {
+      this.windowWidth = window.innerWidth;
+    },
+  },
 };
 </script>
 
