@@ -1,6 +1,6 @@
 <template>
   <div class="experience-card my-5">
-    <div class="card shadow-lg p-5" style="max-width: 780px; width: 50rem">
+    <div class="card shadow-lg p-5" style="max-width: 780px">
       <div class="row g-0">
         <!-- Logo -->
         <div class="col-md-4 img-container">

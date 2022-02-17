@@ -99,6 +99,7 @@ a {
   background: #eee;
   color: #333;
   text-transform: uppercase;
+  text-align: center;
   letter-spacing: 2px;
   display: inline-block;
   font-weight: 700;
@@ -141,6 +142,10 @@ a {
 }
 
 /* Section Title */
+.section-title-container {
+  text-align: center;
+}
+
 .section-title {
   color: #333;
   font-size: 2.7rem;

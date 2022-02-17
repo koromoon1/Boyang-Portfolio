@@ -1,9 +1,12 @@
 <template>
   <footer class="container footer bg-light">
     <div class="d-flex flex-column">
-      <div class="footer-upper py-5 d-flex justify-content-between">
+      <!-- Upper Container -->
+      <div
+        class="footer-upper py-5 d-flex flex-column flex-sm-row justify-content-between align-items-center"
+      >
         <!-- Heading -->
-        <div class="footer-info my-auto ps-3">
+        <div class="footer-info my-3 my-sm-auto ps-sm-3">
           <h4>Boyang's Portfolio</h4>
         </div>
         <!-- Social Links -->
@@ -63,10 +66,6 @@ ul {
 
 h4 {
   font-weight: 700;
-}
-
-.footer-info {
-  width: 40%;
 }
 
 .footer-social {

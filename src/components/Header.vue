@@ -2,7 +2,7 @@
   <nav id="header" class="navbar navbar-expand-lg sticky-top">
     <div class="container">
       <!-- ===== Logo Brand ===== -->
-      <div class="justify-content-start d-flex align-items-center">
+      <div class="justify-content-start d-flex align-items-center ms-2">
         <router-link class="navbar-brand" to="/">
           <span class="logo-container d-inline-block align-text-top">
             <img

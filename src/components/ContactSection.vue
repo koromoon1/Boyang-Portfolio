@@ -1,20 +1,22 @@
 <template>
-  <div class="contact d-flex flex-column align-items-center">
-    <div class="contact-title-container p-5 mt-5">
-      <h2 class="section-title">Contact Me</h2>
-    </div>
-    <p>
-      Feel free to send a email to me, whether it's a project, job opportunity,
-      or just a chat.
-    </p>
-    <p>
-      Send an email to me! I will get back to you as soon as possible. Let's get
-      in touch!
-    </p>
-    <div class="btn-container my-5">
-      <a class="myBtn myBtn-lg" href="mailto:eqboyang@gmail.com"
-        >Send An Email <i class="bi bi-emoji-wink"></i
-      ></a>
+  <div class="contact text-center">
+    <div class="container d-flex flex-column align-items-center px-5 px-lg-0">
+      <div class="contact-title-container p-5 mt-5">
+        <h2 class="section-title">Contact Me</h2>
+      </div>
+      <p>
+        Feel free to send a email to me, whether it's a project, job
+        opportunity, or just a chat.
+      </p>
+      <p>
+        Send an email to me! I will get back to you as soon as possible. Let's
+        get in touch!
+      </p>
+      <div class="btn-container my-5">
+        <a class="myBtn myBtn-lg px-4 px-sm-5" href="mailto:eqboyang@gmail.com"
+          >Send An Email <i class="bi bi-emoji-wink"></i
+        ></a>
+      </div>
     </div>
   </div>
 </template>
@@ -44,7 +46,7 @@ p {
       rgba(0, 0, 0, 0.5)
     ),
     url("../assets/jpg/background-4.jpg");
-  background-size: fit;
+  background-size: cover;
   background-position: center;
 }
 

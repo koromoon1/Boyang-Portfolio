@@ -4,11 +4,15 @@
     <Header />
 
     <!-- Title -->
-    <div class="contact d-flex flex-column align-items-center">
-      <div class="section-title-container p-5 mt-5">
-        <h2 class="section-title"><i class="bi bi-folder2"></i> Projects</h2>
+    <div class="contact container d-flex flex-column align-items-center">
+      <div class="section-title-container">
+        <h2 class="section-title p-5 mt-5">
+          <i class="bi bi-folder2"></i> Projects
+        </h2>
+        <p class="section-title-description">
+          Here you can find some of the projects that I created recently
+        </p>
       </div>
-      <p>Here you can find some of the projects that I created recently</p>
     </div>
 
     <!-- Projects List -->

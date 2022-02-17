@@ -1,15 +1,17 @@
 <template>
   <div id="projectsIntro">
     <!-- Project Info -->
-    <div class="projects-content row g-5 px-5">
+    <div
+      class="projects-content row row-cols-1 row-cols-xl-2 g-xl-5 justify-content-center"
+    >
       <!-- Project Image -->
-      <div class="project-content-img-container col-7 mb-5">
+      <div class="project-content-img-container col mb-xl-5">
         <img class="mockup-img" :src="imageUrl" alt="Software Screenshot" />
-        <p class="overlayText" v-if="!projectHasInfo">Coming Soon</p>
+        <!-- <p class="overlayText" v-if="!projectHasInfo">Coming Soon</p> -->
       </div>
       <!-- Project Info Text -->
       <div
-        class="project-content-info col-5 d-flex flex-column justify-content-center align-items-start"
+        class="project-content-info d-flex flex-column justify-content-center align-items-center align-items-xl-start text-center text-xl-start col mb-5 pb-5 pb-xl-3 pt-5 pt-xl-0 px-5 px-lg-0"
       >
         <!-- Info Title -->
         <h3 v-if="projectHasInfo" class="project-content-info-title">
@@ -78,16 +80,8 @@ export default {
   object-fit: cover;
 }
 
-.project-content-img-container {
-  position: relative;
-}
-
-.overlayText {
-  font-size: 2.5rem;
-  font-weight: 700;
-  position: absolute;
-  top: 40%;
-  left: calc(50% - 116.28px);
+.project-content-info {
+  max-width: 30rem;
 }
 
 .project-content-info-title {
@@ -100,6 +94,5 @@ export default {
   color: grey;
   max-width: 60rem;
   line-height: 1.7;
-  margin-bottom: 3rem;
 }
 </style>

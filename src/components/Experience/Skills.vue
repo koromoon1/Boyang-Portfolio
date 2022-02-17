@@ -9,7 +9,11 @@
     <div
       class="skills-card-container d-flex flex-wrap justify-content-center mt-3 mb-5"
     >
-      <div v-for="(skills, index) in skillsList" :key="index">
+      <div
+        class="d-flex flex-wrap justify-content-center"
+        v-for="(skills, index) in skillsList"
+        :key="index"
+      >
         <SkillsCard v-for="(i, index) in skills" :key="index" :i="i" />
       </div>
     </div>

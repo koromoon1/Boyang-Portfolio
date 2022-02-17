@@ -2,7 +2,7 @@ import { createRouter, createWebHistory } from "vue-router";
 import Home from "../pages/Home";
 import Experience from "../pages/Experience";
 import Projects from "../pages/Projects";
-import ProjectShowcase from "../components/Projects/ProjectShowcase";
+// import ProjectShowcase from "../components/Projects/ProjectShowcase";
 import Contact from "../pages/Contact";
 
 // const routes = [
@@ -36,7 +36,11 @@ const routes = [
   },
   {
     path: "/projects/:projectId",
-    component: ProjectShowcase,
+    // component: ProjectShowcase,
+    component: () =>
+      import(
+        /* webpackChunkName: "about" */ "../components/Projects/ProjectShowcase"
+      ),
   },
   {
     path: "/contact",

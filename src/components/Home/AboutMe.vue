@@ -1,5 +1,5 @@
 <template>
-  <div class="aboutMe d-flex flex-column align-items-center my-5">
+  <div class="aboutMe container d-flex flex-column align-items-center my-5">
     <div class="contact-title-container p-5">
       <h2 class="section-title"><i class="bi bi-person-check"></i> About Me</h2>
     </div>
