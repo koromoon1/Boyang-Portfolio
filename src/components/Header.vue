@@ -23,13 +23,7 @@
         <ul class="navbar-nav mb-2 mb-lg-0">
           <!-- ===== Home Page ===== -->
           <li class="nav-item">
-            <router-link
-              class="nav-link"
-              to="/"
-              @click="homePageScrollTop()"
-              :class="{
-                active: this.$route.fullPath === '/',
-              }"
+            <router-link class="nav-link" to="/" @click="pageScrollTop('/')"
               >Home</router-link
             >
           </li>
@@ -41,14 +35,21 @@
 
           <!-- ===== Experience ===== -->
           <li class="nav-item">
-            <router-link class="nav-link" to="/experience"
+            <router-link
+              class="nav-link"
+              to="/experience"
+              @click="pageScrollTop('/experience')"
               >Experience</router-link
             >
           </li>
 
           <!-- ===== Projects ===== -->
           <li class="nav-item">
-            <router-link class="nav-link" to="/projects">
+            <router-link
+              class="nav-link"
+              to="/projects"
+              @click="pageScrollTop('/projects')"
+            >
               Projects
             </router-link>
           </li>
@@ -115,8 +116,8 @@ export default {
     };
   },
   methods: {
-    homePageScrollTop() {
-      if (this.$route.path === "/") window.scrollTo(0, 0);
+    pageScrollTop(url) {
+      if (this.$route.path === url) window.scrollTo(0, 0);
     },
     activeLication(id) {
       this.currentPage = id;
@@ -160,8 +161,6 @@ export default {
   display: inline-block;
   padding: 0 !important;
   margin: 1.5rem 1.1rem !important;
-  /* margin-left: 1.1rem !important;
-  margin-right: 1.1rem !important; */
   font-size: 1.1rem;
   color: #333;
   text-transform: uppercase;
