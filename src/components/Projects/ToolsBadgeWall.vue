@@ -1,7 +1,13 @@
 <template>
   <div class="tools-badge-wall">
-    <div class="badge-list d-flex justify-content-start">
-      <div class="badge-item mx-3" v-for="tech in techStack" :key="tech.id">
+    <div
+      class="badge-list d-flex justify-content-center justify-content-lg-start"
+    >
+      <div
+        class="badge-item p-2 mx-2 mx-sm-3"
+        v-for="tech in techStack"
+        :key="tech.id"
+      >
         <!-- {{ tech.name }} -->
         <ToolsBadgeImage :i="tech" />
       </div>
@@ -25,7 +31,6 @@ export default {
   height: 70px;
   display: inline-block;
   background: #ddd;
-  padding: 0.3rem;
   border-radius: 5px;
   box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.15);
 }

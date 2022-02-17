@@ -6,9 +6,11 @@
     <!-- Project Showcase -->
     <div class="project-detail">
       <!-- Hero -->
-      <div class="project-detail-hero d-flex flex-column align-items-center">
+      <div
+        class="project-detail-hero d-flex flex-column align-items-center py-5 px-5 my-5"
+      >
         <!-- Heading -->
-        <div class="project-detail-title-container mb-5">
+        <div class="project-detail-title-container mb-5 text-center">
           <h2 class="main-title">{{ projectName }}</h2>
         </div>
         <div class="project-detail-title-sub mb-5">
@@ -43,17 +45,19 @@
       <!-- Project Detail Content -->
       <div class="project-detail-content container">
         <!-- Showcase Image -->
-        <div class="project-detail-showcase-container">
+        <div class="project-detail-showcase-container mx-3 mx-gl-5 px-lg-5">
           <div class="project-detail-showcase-img">
             <img :src="imageUrl" alt="Showcase image of the project" />
           </div>
         </div>
         <!-- Main Content -->
-        <div class="project-detail-content-main">
+        <div class="project-detail-content-main m-5 pt-lg-5">
           <!-- overview -->
           <div class="project-detail-content-overview mb-5">
             <div class="overview-title-container mb-5">
-              <h3 class="section-title-sm">Project Overview</h3>
+              <h3 class="section-title-sm text-center text-lg-start">
+                Project Overview
+              </h3>
             </div>
             <div class="overview-text">
               <p class="section-subtitle-sm">
@@ -78,18 +82,22 @@
           <!-- Tools Used -->
           <div class="project-detail-content-tools">
             <div class="tools-title mb-5">
-              <h3 class="section-title-sm">Tools Used</h3>
+              <h3 class="section-title-sm text-center text-lg-start">
+                Tools Used
+              </h3>
             </div>
             <ToolsBadgeWall :techStack="techStack" />
           </div>
           <!-- See Live -->
-          <div class="project-detail-links">
+          <div
+            class="project-detail-links d-flex flex-column flex-md-row justify-content-md-center align-items-center mb-5 pb-5"
+          >
             <!-- Live Link -->
-            <div class="link-container d-inline me-3">
+            <div class="link-container d-md-inline me-0 me-md-5 mb-5 mb-md-0">
               <a href="#" class="myBtn disabled" target="_blank">Live Link</a>
             </div>
             <!-- Code Link -->
-            <div class="link-container d-inline">
+            <div class="link-container d-md-inline">
               <a
                 href="https://github.com/koromoon1/pig-game"
                 class="myBtn myBtn-dark"
@@ -101,17 +109,26 @@
         </div>
       </div>
     </div>
+
+    <!-- Contact -->
+    <ContactSection id="contact" class="mt-5 pb-5" />
+
+    <!-- Footer -->
+    <Footer id="footer" />
   </div>
 </template>
 
 <script>
 import Header from "../Header.vue";
 import ToolsBadgeWall from "./ToolsBadgeWall.vue";
+import ContactSection from "../ContactSection.vue";
+import Footer from "../Footer.vue";
+
 export default {
   name: "ProjectShowcase",
   inject: ["projects", "technologies"],
   props: ["projectId"],
-  components: { Header, ToolsBadgeWall },
+  components: { Header, ToolsBadgeWall, ContactSection, Footer },
   data() {
     return {
       selectedProject: null,
@@ -160,9 +177,6 @@ export default {
 
 <style scoped>
 /* ==== Heading ==== */
-.project-detail-hero {
-  padding: 5rem 30rem;
-}
 
 .project-detail-title-sub {
   text-align: center;
@@ -173,23 +187,16 @@ export default {
 }
 
 /* ==== Content Section ==== */
-/* .project-detail-content {
-  padding: 2rem 15rem;
-} */
 
 /* Image */
-.project-detail-showcase-container {
+/* .project-detail-showcase-container {
   margin: 0 8rem;
-}
+} */
 
 img {
   width: 100%;
 }
 
-/* ==== Main Content ==== */
-.project-detail-content-main {
-  margin: 4rem 17rem;
-}
 /* Tools Used */
 .project-detail-content-tools {
   margin-bottom: 4.5rem;
