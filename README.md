@@ -1,4 +1,24 @@
-# Boyang_Portfolio
+# boyang-portfolio
 
-Boyang's portfolio. Uses Vue3, Bootstrap5, CSS3.
-Still A lot of place can be improved and structured. Welcome to feedbacks and advices!
+## Project setup
+```
+npm install
+```
+
+### Compiles and hot-reloads for development
+```
+npm run serve
+```
+
+### Compiles and minifies for production
+```
+npm run build
+```
+
+### Lints and fixes files
+```
+npm run lint
+```
+
+### Customize configuration
+See [Configuration Reference](https://cli.vuejs.org/config/).
