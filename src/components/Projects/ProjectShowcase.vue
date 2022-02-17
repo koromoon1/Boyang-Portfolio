@@ -86,7 +86,7 @@
           <div class="project-detail-links">
             <!-- Live Link -->
             <div class="link-container d-inline me-3">
-              <a href="#" class="myBtn disabled" target="_blank">Live Link</a>
+              <a href="#" class="myBtn" target="_blank">Live Link</a>
             </div>
             <!-- Code Link -->
             <div class="link-container d-inline">
