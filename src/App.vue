@@ -152,6 +152,8 @@ a {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 3px;
+  padding: 3rem;
+  margin-top: 3rem;
 }
 
 .section-title-sm {

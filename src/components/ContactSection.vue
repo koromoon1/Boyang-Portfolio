@@ -1,7 +1,7 @@
 <template>
   <div class="contact text-center">
     <div class="container d-flex flex-column align-items-center px-5 px-lg-0">
-      <div class="contact-title-container p-5 mt-5">
+      <div class="contact-title-container p-2 p-sm-5 mt-5">
         <h2 class="section-title">Contact Me</h2>
       </div>
       <p>

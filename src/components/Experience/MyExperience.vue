@@ -1,10 +1,11 @@
 <template>
   <div class="container d-flex flex-column align-items-center">
-    <div class="experience-title-container pt-5 my-5">
+    <div class="experience-title-container text-center">
       <h2 class="section-title"><i class="bi bi-award"></i> My Experience</h2>
+      <p class="mb-0 section-title-description">
+        Here you can find my working experience and achievements
+      </p>
     </div>
-
-    <p class="mb-0">Here you can find my working experience and achievements</p>
 
     <div class="experience-card-container mt-5 d-grid g-3">
       <MyExperienceCard

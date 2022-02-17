@@ -1,6 +1,6 @@
 <template>
   <div class="experience-card my-5">
-    <div class="card shadow-lg p-5" style="max-width: 780px">
+    <div class="card shadow-lg p-0 p-sm-5" style="max-width: 780px">
       <div class="row g-0">
         <!-- Logo -->
         <div class="col-md-4 img-container">
@@ -15,7 +15,7 @@
 
         <!-- Details -->
         <div class="col-md-8">
-          <div class="card-body py-3 px-5">
+          <div class="card-body py-3 px-4 px-sm-5">
             <!-- Company Name -->
             <h5 class="section-title-sm">{{ i.companyName }}</h5>
             <!-- Title -->
