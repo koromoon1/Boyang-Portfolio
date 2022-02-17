@@ -1,6 +1,6 @@
 <template>
-  <div class="experience-card">
-    <div class="card mb-5 shadow-lg p-5" style="max-width: 780px; width: 50rem">
+  <div class="experience-card my-5">
+    <div class="card shadow-lg p-5" style="max-width: 780px; width: 50rem">
       <div class="row g-0">
         <!-- Logo -->
         <div class="col-md-4 img-container">
@@ -17,11 +17,11 @@
         <div class="col-md-8">
           <div class="card-body py-3 px-5">
             <!-- Company Name -->
-            <h5 class="card-title">{{ i.companyName }}</h5>
+            <h5 class="section-title-sm">{{ i.companyName }}</h5>
             <!-- Title -->
-            <h6 class="card-subtitle mb-2 text-muted">{{ i.title }}</h6>
+            <p class="section-subtitle-sm fst-italic">{{ i.title }}</p>
             <!-- Duration -->
-            <h6 class="card-subtitle mb-2 text-muted">
+            <p class="section-subtitle-sm fst-italic">
               {{
                 `${startMonth} ${startYear} ${
                   finishMonth && finishYear
@@ -29,13 +29,13 @@
                     : "-" + " " + "Present"
                 }`
               }}
-            </h6>
+            </p>
             <!-- Description -->
             <ul class="list-group list-group-flush mt-3">
               <li
                 v-for="(description, index) in i.jobDescription"
                 :key="index"
-                class="description-text"
+                class="description-text mb-3"
               >
                 {{ "-" + " " + description }}
               </li>
@@ -64,18 +64,12 @@ export default {
 </script>
 
 <style scoped>
+p {
+  margin-bottom: 0;
+}
+
 ul {
   list-style-type: none;
-}
-
-h5 {
-  color: #333;
-  font-weight: 700;
-  font-size: 1.5rem;
-}
-
-h6 {
-  font-size: 1.2rem;
 }
 
 .card {
@@ -93,8 +87,8 @@ h6 {
 }
 
 .description-text {
-  color: #333;
-  line-height: 1.6rem;
+  color: #666;
+  line-height: 1.7rem;
   font-size: 1.2rem;
 }
 </style>

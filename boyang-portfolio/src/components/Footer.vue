@@ -1,11 +1,10 @@
 <template>
-  <footer class="container footer bg-light mt-5">
+  <footer class="container footer bg-light">
     <div class="d-flex flex-column">
-      <div class="footer-upper pb-4 d-flex justify-content-between">
+      <div class="footer-upper py-5 d-flex justify-content-between">
         <!-- Heading -->
-        <div class="footer-info ps-3">
+        <div class="footer-info my-auto ps-3">
           <h4>Boyang's Portfolio</h4>
-          <p>Inspired by Dopefolio</p>
         </div>
         <!-- Social Links -->
         <div class="footer-social">
@@ -47,7 +46,9 @@
       </div>
       <!-- Copyright -->
       <div class="footer-lower py-4">
-        <div class="main-footer__lower">&copy; Copyright 2021</div>
+        <div class="main-footer__lower">
+          &copy; Copyright 2021. Inspired by Dopefolio
+        </div>
       </div>
     </div>
   </footer>
@@ -93,7 +94,7 @@ h4 {
 .footer-lower {
   border-top: 1px solid #444;
   color: #333;
-  font-size: 1rem;
+  font-size: 0.9rem;
   text-align: center;
 }
 </style>

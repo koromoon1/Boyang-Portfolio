@@ -4,9 +4,9 @@
       <h2 class="section-title"><i class="bi bi-award"></i> My Experience</h2>
     </div>
 
-    <p>Here you can find my working experience and achievements</p>
+    <p class="mb-0">Here you can find my working experience and achievements</p>
 
-    <div class="experience-card-container mt-5 pt-4">
+    <div class="experience-card-container mt-5 d-grid g-3">
       <MyExperienceCard
         v-for="(i, index) in experienceList"
         :key="index"

@@ -1,5 +1,5 @@
 <template>
-  <nav id="header" class="navbar navbar-expand-lg sticky-top bg-light">
+  <nav id="header" class="navbar navbar-expand-lg sticky-top">
     <div class="container">
       <!-- ===== Logo Brand ===== -->
       <div class="justify-content-start d-flex align-items-center">
@@ -126,6 +126,11 @@ export default {
 </script>
 
 <style scoped>
+#header {
+  background-color: #fff;
+  box-shadow: 0 10px 100px rgb(0 0 0 / 10%);
+}
+
 /* Logo */
 .logo-container {
   width: 3rem;
@@ -154,8 +159,9 @@ export default {
 .nav-link {
   display: inline-block;
   padding: 0 !important;
-  margin-left: 1.1rem !important;
-  margin-right: 1.1rem !important;
+  margin: 1.5rem 1.1rem !important;
+  /* margin-left: 1.1rem !important;
+  margin-right: 1.1rem !important; */
   font-size: 1.1rem;
   color: #333;
   text-transform: uppercase;

@@ -3,7 +3,7 @@
     <!-- Header -->
     <Header />
 
-    <MyExperience id="myExperience" class="my-5" />
+    <MyExperience id="myExperience" class="mb-5" />
 
     <Skills id="skills" class="my-5 pb-5" />
 

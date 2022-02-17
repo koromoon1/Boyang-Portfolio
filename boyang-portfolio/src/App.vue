@@ -37,11 +37,31 @@ export default {
         },
       ],
       technologies: [
-        { id: "tech1", name: "HTML5", type: "Markup Language" },
-        { id: "tech2", name: "CSS3", type: "Markup Language" },
-        { id: "tech3", name: "Javascript", type: "Programming Language" },
-        { id: "tech4", name: "Bootstrap", type: "Framework" },
-        { id: "tech5", name: "Vue", type: "Framework" },
+        {
+          id: "tech1",
+          name: "HTML5",
+          type: "Markup Language",
+          iconFileName: "html5",
+        },
+        {
+          id: "tech2",
+          name: "CSS3",
+          type: "Markup Language",
+          iconFileName: "css3-alt",
+        },
+        {
+          id: "tech3",
+          name: "Javascript",
+          type: "Programming Language",
+          iconFileName: "js-square",
+        },
+        {
+          id: "tech4",
+          name: "Bootstrap",
+          type: "Framework",
+          iconFileName: "bootstrap",
+        },
+        { id: "tech5", name: "Vue", type: "Framework", iconFileName: "vuejs" },
       ],
     };
   },
@@ -70,6 +90,10 @@ a {
 }
 
 /* Buttons */
+.disabled {
+  pointer-events: none;
+}
+
 .myBtn,
 .myBtn-dark,
 .myBtn-lg {
@@ -105,6 +129,19 @@ a {
   transform: translateY(-5px);
 }
 
+/* Main Title */
+.main-title {
+  font-size: 4rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.main-title-sub {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
 /* Section Title */
 .section-title {
   color: #333;
@@ -112,5 +149,24 @@ a {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 3px;
+}
+
+.section-title-sm {
+  color: #333;
+  font-size: 1.7rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.section-subtitle-sm {
+  font-size: 1.2rem;
+  color: #666;
+}
+
+.section-title-description {
+  text-align: center;
+  font-size: 1.3rem;
+  color: #666;
+  line-height: 1.7;
 }
 </style>

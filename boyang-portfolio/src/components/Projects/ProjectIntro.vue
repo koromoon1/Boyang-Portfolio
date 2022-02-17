@@ -26,7 +26,10 @@
           Magni, reiciendis!
         </p>
         <!-- Project Link -->
-        <router-link :to="projectLink" class="myBtn myBtn-dark"
+        <router-link
+          :to="projectLink"
+          class="myBtn myBtn-dark"
+          :class="{ disabled: !this.projectHasInfo }"
           >Project Detail</router-link
         >
       </div>
@@ -88,11 +91,12 @@ export default {
 }
 
 .project-content-info-title {
+  font-size: 2rem;
   font-weight: 700;
 }
 
 .project-content-info-text {
-  font-size: 1.1rem;
+  font-size: 1.3rem;
   color: grey;
   max-width: 60rem;
   line-height: 1.7;
