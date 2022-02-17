@@ -15,7 +15,7 @@
 
         <!-- Details -->
         <div class="col-md-8">
-          <div class="card-body py-3 px-4 px-sm-5">
+          <div class="card-body py-3 px-5 px-xl-4 px-sm-5">
             <!-- Company Name -->
             <h5 class="section-title-sm">{{ i.companyName }}</h5>
             <!-- Title -->

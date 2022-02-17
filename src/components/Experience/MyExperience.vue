@@ -1,7 +1,9 @@
 <template>
   <div class="container d-flex flex-column align-items-center">
     <div class="experience-title-container text-center">
-      <h2 class="section-title"><i class="bi bi-award"></i> My Experience</h2>
+      <h2 class="section-title px-0 px-sm-5">
+        <i class="bi bi-award"></i> My Experience
+      </h2>
       <p class="mb-0 section-title-description">
         Here you can find my working experience and achievements
       </p>

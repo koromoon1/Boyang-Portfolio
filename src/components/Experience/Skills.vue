@@ -1,7 +1,7 @@
 <template>
-  <div class="container d-flex flex-column align-items-center">
+  <div class="container d-flex flex-column align-items-center text-center">
     <!-- Title -->
-    <div class="title-container pt-5 pb-3 mt-5">
+    <div class="title-container pb-3">
       <h2 class="section-title"><i class="bi bi-tools"></i> My Skills</h2>
     </div>
 
