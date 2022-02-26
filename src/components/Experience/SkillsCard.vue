@@ -22,5 +22,10 @@ export default {
   background: #ddd;
   border-radius: 5px;
   box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s;
+}
+
+.skill-card:hover {
+  transform: translateY(-3px);
 }
 </style>
