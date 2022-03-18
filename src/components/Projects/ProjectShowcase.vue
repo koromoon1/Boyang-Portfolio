@@ -15,14 +15,7 @@
         </div>
         <div class="project-detail-title-sub mb-5">
           <p class="main-title-sub">
-            A fun game for two players to keep rolling a dice in their round to
-            collect points. Each time a <b>1</b> is rolled, the round is over
-            and the dice is handed to the other player.
-          </p>
-          <p class="main-title-sub">
-            Who first collect <b>100</b> ponts
-            <b>wins</b>
-            the game!
+            {{ description }}
           </p>
         </div>
         <!-- Live Link -->
@@ -33,10 +26,7 @@
         </div> -->
         <!-- Code Link -->
         <div class="link-container d-inline">
-          <a
-            href="https://github.com/koromoon1/pig-game"
-            class="myBtn myBtn-dark"
-            target="_blank"
+          <a :href="codeLink" class="myBtn myBtn-dark" target="_blank"
             >Code Link</a
           >
         </div>
@@ -94,14 +84,17 @@
           >
             <!-- Live Link -->
             <div class="link-container d-md-inline me-0 me-md-5 mb-5 mb-md-0">
-              <a href="#" class="myBtn disabled" target="_blank">Live Link</a>
+              <a
+                :href="liveLink"
+                class="myBtn"
+                :class="{ disabled: !liveLink }"
+                target="_blank"
+                >Live Link</a
+              >
             </div>
             <!-- Code Link -->
             <div class="link-container d-md-inline">
-              <a
-                href="https://github.com/koromoon1/pig-game"
-                class="myBtn myBtn-dark"
-                target="_blank"
+              <a :href="codeLink" class="myBtn myBtn-dark" target="_blank"
                 >Code Link</a
               >
             </div>
@@ -133,6 +126,9 @@ export default {
     return {
       selectedProject: null,
       projectName: "",
+      description: "",
+      liveLink: "",
+      codeLink: "",
       techStack: [],
     };
   },
@@ -151,13 +147,16 @@ export default {
     // loop out all technologies that id match the tech stack item
     for (const tech of techStack) {
       const selectedTechnology = this.technologies.find(
-        (technology) => technology.id === tech
+        (technology) => technology.name === tech
       );
       // store technology in the array
       selectedTechStack.push(selectedTechnology);
     }
     this.techStack = selectedTechStack;
     this.projectName = selectedProject.name;
+    this.description = selectedProject.description;
+    this.liveLink = selectedProject.liveLink;
+    this.codeLink = selectedProject.codeLink;
   },
   computed: {
     imageUrl() {

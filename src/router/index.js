@@ -5,22 +5,6 @@ import Projects from "../pages/Projects";
 // import ProjectShowcase from "../components/Projects/ProjectShowcase";
 import Contact from "../pages/Contact";
 
-// const routes = [
-//   {
-//     path: '/',
-//     name: 'Home',
-//     component: Home
-//   },
-//   {
-//     path: '/about',
-//     name: 'About',
-//     // route level code-splitting
-//     // this generates a separate chunk (about.[hash].js) for this route
-//     // which is lazy-loaded when the route is visited.
-//     component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
-//   }
-// ]
-
 const routes = [
   {
     path: "/",
@@ -48,23 +32,17 @@ const routes = [
   },
 ];
 
-// scrollBehavior(to, from, savedPosition) {
-//   if (savedPosition) {
-//     return savedPosition;
-//   } else {
-//     return { top: 0 };
-//   }
-// },
-
 const router = createRouter({
   history: createWebHistory(),
   routes,
   linkActiveClass: "active",
-  scrollBehavior(to) {
-    if (to.hash) {
+  scrollBehavior(to, from, savedPosition) {
+    if (savedPosition) {
+      return savedPosition;
+    } else {
       return {
-        el: to.hash,
-        behavior: "smooth",
+        left: 0,
+        top: 0,
       };
     }
   },

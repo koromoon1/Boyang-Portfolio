@@ -10,25 +10,30 @@ export default {
       projects: [
         {
           id: "project1",
+          name: "Find a Coach",
+          techStack: ["Vue", "Javascript", "CSS3"],
+          imgName: "findACoach",
+          imgType: "png",
+          description:
+            "A posting website that allow people find or become a coach to help other people achieve their goal of becoming a developer.",
+          liveLink: "https://myproject1-b5913.web.app/coaches",
+          codeLink: "https://github.com/koromoon1/Find-A-Coach-Project",
+        },
+        {
+          id: "project2",
           name: "Pig Game",
-          techStack: ["tech1", "tech2", "tech3"],
+          techStack: ["HTML5", "CSS3", "Javascript"],
           imgName: "pigGame",
           imgType: "png",
           description:
             "A simple but super fun game for 2 players. Try it out with your friends and see who can win the game!",
+          codeLink: "https://github.com/koromoon1/pig-game",
         },
-        {
-          id: "project2",
-          name: "Project 2",
-          techStack: ["tech1", "tech2", "tech4"],
-          imgName: "",
-          imgType: "",
-          description: "",
-        },
+
         {
           id: "project3",
           name: "Project 3",
-          techStack: ["tech2", "tech3", "tech4", "tech5"],
+          techStack: ["CSS3", "Javascript", "Bootstrap", "Vue"],
           imgName: "",
           imgType: "",
           description: "",
