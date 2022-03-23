@@ -5,12 +5,16 @@
     <div class="contact-title-container py-0 py-sm-5">
       <h2 class="section-title"><i class="bi bi-person-check"></i> About Me</h2>
     </div>
-    <h3 class="mb-4">I'm opening for job now!</h3>
+    <h3 class="mb-5">Actively looking for job!</h3>
     <p>
-      I'm self-motivated <i class="bi bi-alarm"></i>, willing to learn
-      <i class="bi bi-stars"></i>
-      and full of passion <i class="bi bi-person-hearts"></i>
+      A self-motivated <i class="bi bi-alarm"></i> developer that has hands-on
+      expereience with Vue.js projects and is learning React.js right now.
+      <br />
+      Being industrious on solving problems as well as playing a team role.
+      <br />
+      always being curious about new techs <i class="bi bi-stars"></i>
     </p>
+
     <p>Want to know more about my achievements?</p>
     <div class="btn-container my-4 mb-5">
       <div class="myBtn-container">

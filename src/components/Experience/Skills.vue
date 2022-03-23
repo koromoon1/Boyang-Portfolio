@@ -18,7 +18,7 @@
       </div>
     </div>
 
-    <p>More are coming <i class="bi bi-emoji-sunglasses"></i></p>
+    <p>More are coming <i class="bi bi-stars"></i></p>
   </div>
 </template>
 

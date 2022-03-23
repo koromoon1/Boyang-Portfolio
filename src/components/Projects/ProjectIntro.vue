@@ -9,6 +9,7 @@
         <img class="mockup-img" :src="imageUrl" alt="Software Screenshot" />
         <!-- <p class="overlayText" v-if="!projectHasInfo">Coming Soon</p> -->
       </div>
+
       <!-- Project Info Text -->
       <div
         class="project-content-info d-flex flex-column justify-content-center align-items-center align-items-xl-start text-center text-xl-start col mb-5 pb-5 pb-xl-3 pt-5 pt-xl-0 px-5 px-lg-0"
@@ -18,6 +19,7 @@
           {{ project.name }}
         </h3>
         <h3 v-else class="project-content-info-title">Project Coming Soon</h3>
+
         <!-- Description -->
         <p v-if="projectHasInfo" class="project-content-info-text my-4">
           {{ project.description }}
@@ -27,6 +29,7 @@
           fuga architecto reiciendis omnis sit aspernatur molestias dolorum.
           Magni, reiciendis!
         </p>
+
         <!-- Project Link -->
         <router-link
           :to="projectLink"
@@ -43,6 +46,12 @@
 export default {
   name: "ProjectList",
   props: ["project"],
+  data() {
+    return {
+      isLoading: false,
+      error: null,
+    };
+  },
   computed: {
     projectLink() {
       return "/projects/" + this.project.id;

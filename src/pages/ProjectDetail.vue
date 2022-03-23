@@ -1,8 +1,5 @@
 <template>
   <div id="project-showcase">
-    <!-- Header -->
-    <Header />
-
     <!-- Project Showcase -->
     <div class="project-detail">
       <!-- Hero -->
@@ -19,13 +16,13 @@
           </p>
         </div>
         <!-- Live Link -->
-        <!-- <div class="project-live-link">
-          <a href="#" class="myBtn myBtn-dark" target="_blank" disabled
+        <div class="project-live-link" v-if="!!liveLink">
+          <a :href="liveLink" class="myBtn" target="_blank" disabled
             >Live Link</a
           >
-        </div> -->
+        </div>
         <!-- Code Link -->
-        <div class="link-container d-inline">
+        <div class="link-container d-inline" v-else>
           <a :href="codeLink" class="myBtn myBtn-dark" target="_blank"
             >Code Link</a
           >
@@ -102,26 +99,17 @@
         </div>
       </div>
     </div>
-
-    <!-- Contact -->
-    <ContactSection id="contact" class="mt-5 pb-5" />
-
-    <!-- Footer -->
-    <Footer id="footer" />
   </div>
 </template>
 
 <script>
-import Header from "../Header.vue";
-import ToolsBadgeWall from "./ToolsBadgeWall.vue";
-import ContactSection from "../ContactSection.vue";
-import Footer from "../Footer.vue";
+import ToolsBadgeWall from "../components/Projects/ToolsBadgeWall.vue";
 
 export default {
   name: "ProjectShowcase",
   inject: ["projects", "technologies"],
   props: ["projectId"],
-  components: { Header, ToolsBadgeWall, ContactSection, Footer },
+  components: { ToolsBadgeWall },
   data() {
     return {
       selectedProject: null,
@@ -160,7 +148,7 @@ export default {
   },
   computed: {
     imageUrl() {
-      return require("../../assets/projects/" +
+      return require("../assets/projects/" +
         this.selectedProject.imgName +
         "." +
         this.selectedProject.imgType);

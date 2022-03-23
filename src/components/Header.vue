@@ -23,35 +23,30 @@
         <ul class="navbar-nav mb-2 mb-lg-0">
           <!-- ===== Home Page ===== -->
           <li class="nav-item">
-            <router-link class="nav-link" to="/" @click="pageScrollTop('/')"
+            <router-link to="/" class="nav-link" @click="pageScrollTop('/')"
               >Home</router-link
             >
           </li>
 
-          <!-- ===== About ===== -->
-          <!-- <li class="nav-item">
-            <router-link class="nav-link" to="/about">About</router-link>
-          </li> -->
-
           <!-- ===== Experience ===== -->
           <li class="nav-item">
             <router-link
-              class="nav-link"
               to="/experience"
+              class="nav-link"
               @click="pageScrollTop('/experience')"
-              >Experience</router-link
             >
+              Experience
+            </router-link>
           </li>
 
           <!-- ===== Projects ===== -->
           <li class="nav-item">
             <router-link
-              class="nav-link"
               to="/projects"
+              class="nav-link"
               @click="pageScrollTop('/projects')"
+              >Projects</router-link
             >
-              Projects
-            </router-link>
           </li>
 
           <!-- ===== Resume ===== -->
@@ -60,11 +55,6 @@
               >Resume<i class="pdf-icon bi bi-file-earmark-pdf-fill"></i
             ></a>
           </li>
-
-          <!-- ===== Contact ===== -->
-          <!-- <li class="nav-item">
-            <router-link class="nav-link" to="/contact"> Contact </router-link>
-          </li> -->
 
           <!-- Language Changing -->
           <!-- <li class="nav-item dropdown">
@@ -117,7 +107,7 @@ export default {
   },
   methods: {
     pageScrollTop(url) {
-      if (this.$route.path === url) window.scrollTo(0, 0);
+      this.$router.push(url);
     },
     activeLication(id) {
       this.currentPage = id;

@@ -85,6 +85,6 @@ ul {
 
 /* Project Button */
 a.myBtn:hover {
-  color: #333;
+  color: #666;
 }
 </style>

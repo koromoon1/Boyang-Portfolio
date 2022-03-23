@@ -1,9 +1,7 @@
 import { createRouter, createWebHistory } from "vue-router";
 import Home from "../pages/Home";
-import Experience from "../pages/Experience";
-import Projects from "../pages/Projects";
-// import ProjectShowcase from "../components/Projects/ProjectShowcase";
-import Contact from "../pages/Contact";
+// import Experience from "../pages/Experience";
+// import Projects from "../pages/Projects";
 
 const routes = [
   {
@@ -12,23 +10,16 @@ const routes = [
   },
   {
     path: "/experience",
-    component: Experience,
+    component: () => import("../pages/Experience"),
   },
   {
     path: "/projects",
-    component: Projects,
+    component: () => import("../pages/Projects"),
   },
   {
     path: "/projects/:projectId",
-    // component: ProjectShowcase,
-    component: () =>
-      import(
-        /* webpackChunkName: "about" */ "../components/Projects/ProjectShowcase"
-      ),
-  },
-  {
-    path: "/contact",
-    component: Contact,
+    // component: ProjectDetail,
+    component: () => import("../pages/ProjectDetail"),
   },
 ];
 
@@ -47,5 +38,9 @@ const router = createRouter({
     }
   },
 });
+
+// router.afterEach(() => {
+//   window.scrollTo(0, 0);
+// });
 
 export default router;

@@ -1,10 +1,31 @@
 <template>
-  <router-view />
+  <div>
+    <!-- Header -->
+    <Header></Header>
+
+    <!-- Router View -->
+    <router-view></router-view>
+
+    <!-- Social Link Side Bar -->
+    <SocialLinkSideBar :page="'home'" />
+
+    <!-- Contact -->
+    <ContactSection id="contact" class="pb-5" />
+
+    <!-- Footer -->
+    <Footer id="footer" />
+  </div>
 </template>
 
 <script>
+import Header from "./components/Header";
+import ContactSection from "./components/ContactSection.vue";
+import Footer from "./components/Footer.vue";
+import SocialLinkSideBar from "./components/SocialLinkSideBar.vue";
+
 export default {
   name: "App",
+  components: { Header, ContactSection, Footer, SocialLinkSideBar },
   data() {
     return {
       projects: [
@@ -16,7 +37,7 @@ export default {
           imgType: "png",
           description:
             "A posting website that allow people find or become a coach to help other people achieve their goal of becoming a developer.",
-          liveLink: "https://myproject1-b5913.web.app/coaches",
+          liveLink: "https://myproject1-b5913.web.app/",
           codeLink: "https://github.com/koromoon1/Find-A-Coach-Project",
         },
         {
@@ -27,6 +48,7 @@ export default {
           imgType: "png",
           description:
             "A simple but super fun game for 2 players. Try it out with your friends and see who can win the game!",
+          liveLink: "https://pig-game-b1eb4.web.app/",
           codeLink: "https://github.com/koromoon1/pig-game",
         },
 
@@ -77,106 +99,4 @@ export default {
 };
 </script>
 
-<style>
-/* Import Google Font */
-@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;700&display=swap");
-
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-family: "Source Sans Pro", sans-serif;
-}
-
-a {
-  text-decoration: none !important;
-}
-
-/* Buttons */
-.disabled {
-  pointer-events: none;
-}
-
-.myBtn,
-.myBtn-dark,
-.myBtn-lg {
-  display: block;
-  background: #eee;
-  color: #333;
-  text-transform: uppercase;
-  text-align: center;
-  letter-spacing: 2px;
-  display: inline-block;
-  font-weight: 700;
-  border-radius: 5px;
-  box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.15);
-  transition: transform 0.3s;
-  padding: 0.9rem 4.8rem;
-  font-size: 1.2rem;
-}
-.myBtn-dark {
-  background: #333;
-  color: #eee;
-}
-.myBtn-lg {
-  padding: 1.2rem 4rem;
-  font-size: 1.4rem;
-}
-.myBtn:hover {
-  color: #333;
-  transform: translateY(-3px);
-}
-.myBtn-dark:hover {
-  color: #eee;
-}
-.myBtn-lg:hover {
-  transform: translateY(-5px);
-}
-
-/* Main Title */
-.main-title {
-  font-size: 4rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 3px;
-}
-
-.main-title-sub {
-  font-size: 1.5rem;
-  margin-bottom: 0.5rem;
-}
-
-/* Section Title */
-.section-title-container {
-  text-align: center;
-}
-
-.section-title {
-  color: #333;
-  font-size: 2.7rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 3px;
-  padding: 3rem;
-  margin-top: 3rem;
-}
-
-.section-title-sm {
-  color: #333;
-  font-size: 1.7rem;
-  font-weight: 700;
-  letter-spacing: 1px;
-}
-
-.section-subtitle-sm {
-  font-size: 1.2rem;
-  color: #666;
-}
-
-.section-title-description {
-  text-align: center;
-  font-size: 1.3rem;
-  color: #666;
-  line-height: 1.7;
-}
-</style>
+<style></style>

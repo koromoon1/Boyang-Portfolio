@@ -1,6 +1,6 @@
 <template>
-  <footer class="container footer bg-light">
-    <div class="d-flex flex-column">
+  <footer class="footer bg-light">
+    <div class="container d-flex flex-column">
       <!-- Upper Container -->
       <div
         class="footer-upper py-5 d-flex flex-column flex-sm-row justify-content-between align-items-center"
